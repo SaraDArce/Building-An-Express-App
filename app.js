@@ -34,8 +34,8 @@ app.get("/about", (req, res) => {
 
 // Download route for the image
 app.get("/download", (req, res) => {
-  const imagePath = "public/pug.jpg";
-  res.download(imagePath, "pug.jpg");
+  const imagePath = "public/Screenshot 2024-01-15 at 8.28.53 PM.png";
+  res.download(imagePath, "public/Screenshot 2024-01-15 at 8.28.53 PM.png");
 });
 
 // Contact route with form
