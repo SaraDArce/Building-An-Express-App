@@ -1,0 +1,10 @@
+// home.pug
+extends layout
+
+block content
+  h1= title
+  ul
+    each item in navigation
+      li
+        a(href=item.url)= item.name
+  p Welcome to #{title} page!
