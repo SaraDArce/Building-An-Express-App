@@ -10,6 +10,10 @@ const port = 3000;
 app.set("view engine", "pug");
 app.set("views", "./views");
 
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Data
 const navigationItems = [
   { name: "Home", url: "/" },
