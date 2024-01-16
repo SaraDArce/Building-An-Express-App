@@ -13,6 +13,7 @@ app.set("views", "./views");
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 // Data
 const navigationItems = [
@@ -29,6 +30,12 @@ app.get("/", (req, res) => {
 // About route
 app.get("/about", (req, res) => {
   res.render("about", { title: "About", navigation: navigationItems });
+});
+
+// Download route for the image
+app.get("/download", (req, res) => {
+  const imagePath = "public/pug.jpg";
+  res.download(imagePath, "pug.jpg");
 });
 
 // Contact route with form

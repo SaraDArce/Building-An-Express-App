@@ -1,4 +1,5 @@
 // home.pug
+
 extends layout
 
 block content
@@ -7,4 +8,12 @@ block content
     each item in navigation
       li
         a(href=item.url)= item.name
-  p Welcome to #{title} page!
+
+  img(src='/pug.jpg', alt='Pug', width='300')
+  
+  button(onclick="downloadImage()") Download Image
+
+  script.
+    function downloadImage() {
+      window.location.href = '/download';
+    }

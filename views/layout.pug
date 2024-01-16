@@ -1,0 +1,19 @@
+// layout.pug
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='./style.css') 
+  body
+    header
+      h1 My Express App
+      nav
+        ul
+          each item in navigation
+            li
+              a(href=item.url)= item.name
+
+    main
+      block content
+
+    
